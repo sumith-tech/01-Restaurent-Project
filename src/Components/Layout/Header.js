@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import classes from "./Header.module.css";
 import bannerimg from "../../Assets/food-banner.jpg";
 import ButtonCart from "./ButtonCart";
+import MealsSummary from "../Meals/MealsSummary";
 const Header = (props) => {
   return (
     <Fragment>
@@ -9,7 +10,7 @@ const Header = (props) => {
         <h1>ReactMeals</h1>
         <ButtonCart />
       </header>
-      <div className={classes['main-image']}>
+      <div className={classes["main-image"]}>
         <img src={bannerimg} alt="a animated food table"></img>
       </div>
     </Fragment>
