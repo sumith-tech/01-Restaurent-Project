@@ -1,6 +1,8 @@
 import CartIcon from "../Cart/Carticon";
 import classes from "./Buttoncart.module.css";
+
 const ButtonCart = () => {
+
   return (
     <button className={classes.button}>
       <span className={classes.icon}>
