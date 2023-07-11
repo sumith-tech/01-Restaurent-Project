@@ -5,7 +5,7 @@ const App = () => {
   return (
     <Fragment>
       <Header />
-      <main>
+      <main style={{backgroundColor:"#383838"}}>
         <Meals/>
       </main>
     </Fragment>
