@@ -1,10 +1,10 @@
 import CartIcon from "../Cart/Carticon";
 import classes from "./Buttoncart.module.css";
 
-const ButtonCart = () => {
+const ButtonCart = (props) => {
 
   return (
-    <button className={classes.button}>
+    <button className={classes.button} onClick={props.onClick}>
       <span className={classes.icon}>
         <CartIcon />
       </span>
