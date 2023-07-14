@@ -15,13 +15,13 @@ const App = () => {
   };
 
   return (
-      <CartProvider>
-      {showCart && <Cart onclose={closeCartHandler}/>}
+    <CartProvider>
+      {showCart && <Cart onclose={closeCartHandler} />}
       <Header onshow={showCartHandler} />
       <main style={{ backgroundColor: "#383838" }}>
         <Meals />
       </main>
-      </CartProvider>
+    </CartProvider>
   );
 };
 

@@ -7,10 +7,11 @@ const MealForm = (props) => {
 
   const addtoCartHandler = (event) => {
     event.preventDefault();
-    cartctx.addItem(props.item);
+    const quantity = document.getElementById("amount_" + props.id).value;
+    cartctx.addItem({ ...props.item, quantity: quantity });
   };
   return (
-    <form className={classes.form}>
+    <form className={classes.form} onSubmit={addtoCartHandler}>
       <Input
         label="Amount"
         input={{
@@ -22,7 +23,7 @@ const MealForm = (props) => {
           defaultValue: "1",
         }}
       />
-      <button onClick={addtoCartHandler}>+ Add</button>
+      <button>+ Add</button>
     </form>
   );
 };

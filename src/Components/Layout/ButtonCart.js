@@ -4,7 +4,11 @@ import classes from "./Buttoncart.module.css";
 import CartContext from "../../Store/cart-context";
 const ButtonCart = (props) => {
   const cartctx = useContext(CartContext);
-  const numberofCartItems = cartctx.items.length;
+  let numberofCartItems = 0;
+  cartctx.items.forEach((item) => {
+    numberofCartItems = numberofCartItems + Number(item.quantity);
+  });
+
   return (
     <button className={classes.button} onClick={props.onClick}>
       <span className={classes.icon}>
