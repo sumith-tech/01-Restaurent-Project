@@ -7,9 +7,9 @@ const Cart = (props) => {
   const cartctx = useContext(CartContext);
   const hasitem = cartctx.items.length > 0;
 
-  const cartItemRemoveHandler = (id) => {
-    cartctx.removeItem(id);
-  };
+  // const cartItemRemoveHandler = (id) => {
+  //   cartctx.removeItem(id);
+  // };
   const cartItemAddHandler = (item) => {
     console.log(item);
     cartctx.addItem({ ...item, quantity: 1 });
